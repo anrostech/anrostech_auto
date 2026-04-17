@@ -1,0 +1,323 @@
+schema: "paperclip/v1"
+agents:
+  ceo:
+    role: "ceo"
+    adapter:
+      config:
+        graceSec: 20
+        model: "openrouter/arcee-ai/trinity-large-preview:free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  engineer1:
+    role: "engineer"
+    icon: "code"
+    capabilities: "Implements technical features, writes code, fixes bugs, and supports engineering delivery. Specializes in frontend/backend development, API integrations, and system implementation. CI/CD deployment. Push new feature, fix"
+    adapter:
+      config:
+        graceSec: 20
+        model: "opencode/nemotron-3-super-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+  legalcounsel:
+    role: "general"
+    icon: "shield"
+    capabilities: "Provides legal guidance, contract review, compliance, and risk management"
+    adapter:
+      config:
+        graceSec: 20
+        model: "openrouter/meta-llama/llama-3.3-70b-instruct:free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+        maxConcurrentRuns: 1
+  marketer:
+    role: "general"
+    icon: "search"
+    capabilities: "Responsible for marketing tasks of the company"
+    adapter:
+      config:
+        graceSec: 20
+        model: "opencode/nemotron-3-super-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+  qa:
+    role: "qa"
+    icon: "eye"
+    capabilities: "Executes comprehensive testing, quality verification, bug detection, and validation of technical implementations. Ensures software quality, reliability, and user experience standards. Test new feature, fix"
+    adapter:
+      config:
+        graceSec: 20
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+  reviewer:
+    role: "general"
+    adapter:
+      config:
+        dangerouslySkipPermissions: true
+        graceSec: 20
+        model: "openrouter/nousresearch/hermes-3-llama-3.1-405b:free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+        maxConcurrentRuns: 1
+  uiuxdesigner:
+    role: "designer"
+    icon: "eye"
+    capabilities: "Owns user experience, design systems, and user research"
+    adapter:
+      config:
+        graceSec: 20
+        model: "openrouter/nvidia/nemotron-nano-9b-v2:free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 600
+        maxConcurrentRuns: 1
+company:
+  logoPath: "images/company-logo.png"
+  requireBoardApprovalForNewAgents: false
+projects:
+  anrostech-company:
+    color: "#eab308"
+    status: "in_progress"
+    workspaces:
+      anrostech:
+        name: "anrostech"
+        defaultRef: "main"
+        isPrimary: true
+        repoRef: "main"
+        repoUrl: "https://github.com/anrostech/anrostech"
+        sourceType: "git_repo"
+        visibility: "default"
+  mark:
+    color: "#ec4899"
+    status: "in_progress"
+    workspaces:
+      mark:
+        name: "mark"
+        defaultRef: "main"
+        isPrimary: true
+        repoRef: "main"
+        repoUrl: "https://github.com/anrostech/mark"
+        sourceType: "git_repo"
+        visibility: "default"
+  samio-bakery:
+    color: "#3b82f6"
+    status: "in_progress"
+    workspaces:
+      samio:
+        name: "samio"
+        defaultRef: "main"
+        isPrimary: true
+        repoRef: "main"
+        repoUrl: "https://github.com/anrostech/samio"
+        sourceType: "git_repo"
+        visibility: "default"
+sidebar:
+  agents:
+    - "ceo"
+    - "engineer1"
+    - "legalcounsel"
+    - "marketer"
+    - "qa"
+    - "reviewer"
+    - "uiuxdesigner"
+  projects:
+    - "anrostech-company"
+    - "mark"
+    - "samio-bakery"
+tasks:
+  anraaa-1:
+    identifier: "ANRAAA-1"
+    priority: "medium"
+    status: "todo"
+  anraaa-10:
+    identifier: "ANRAAA-10"
+    priority: "low"
+    status: "done"
+  anraaa-11:
+    assigneeAdapterOverrides:
+      adapterConfig:
+        variant: "medium"
+    identifier: "ANRAAA-11"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "in_progress"
+  anraaa-12:
+    identifier: "ANRAAA-12"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-13:
+    identifier: "ANRAAA-13"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-14:
+    identifier: "ANRAAA-14"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-15:
+    identifier: "ANRAAA-15"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-16:
+    identifier: "ANRAAA-16"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "todo"
+  anraaa-17:
+    identifier: "ANRAAA-17"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-18:
+    identifier: "ANRAAA-18"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-19:
+    identifier: "ANRAAA-19"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-2:
+    identifier: "ANRAAA-2"
+    priority: "high"
+    status: "done"
+  anraaa-20:
+    billingCode: "engineering"
+    identifier: "ANRAAA-20"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-21:
+    identifier: "ANRAAA-21"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-22:
+    identifier: "ANRAAA-22"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-23:
+    billingCode: "qa"
+    identifier: "ANRAAA-23"
+    priority: "medium"
+    status: "done"
+  anraaa-24:
+    identifier: "ANRAAA-24"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-25:
+    billingCode: "dev"
+    identifier: "ANRAAA-25"
+    priority: "medium"
+    status: "done"
+  anraaa-26:
+    identifier: "ANRAAA-26"
+    priority: "medium"
+    projectWorkspaceKey: "samio"
+    status: "done"
+  anraaa-27:
+    identifier: "ANRAAA-27"
+    priority: "medium"
+    status: "done"
+  anraaa-28:
+    billingCode: "qa"
+    identifier: "ANRAAA-28"
+    priority: "medium"
+    status: "done"
+  anraaa-29:
+    identifier: "ANRAAA-29"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "todo"
+  anraaa-3:
+    identifier: "ANRAAA-3"
+    priority: "high"
+    status: "done"
+  anraaa-30:
+    identifier: "ANRAAA-30"
+    priority: "medium"
+    projectWorkspaceKey: "anrostech"
+    status: "todo"
+  anraaa-31:
+    identifier: "ANRAAA-31"
+    priority: "high"
+    status: "done"
+  anraaa-32:
+    identifier: "ANRAAA-32"
+    priority: "medium"
+    status: "done"
+  anraaa-33:
+    billingCode: "qa"
+    identifier: "ANRAAA-33"
+    priority: "medium"
+    status: "done"
+  anraaa-34:
+    identifier: "ANRAAA-34"
+    priority: "medium"
+    status: "done"
+  anraaa-35:
+    identifier: "ANRAAA-35"
+    priority: "medium"
+    status: "done"
+  anraaa-36:
+    identifier: "ANRAAA-36"
+    priority: "high"
+    projectWorkspaceKey: "anrostech"
+    status: "done"
+  anraaa-37:
+    identifier: "ANRAAA-37"
+    priority: "high"
+    projectWorkspaceKey: "mark"
+    status: "blocked"
+  anraaa-4:
+    identifier: "ANRAAA-4"
+    priority: "medium"
+    status: "done"
+  anraaa-5:
+    identifier: "ANRAAA-5"
+    priority: "high"
+    status: "done"
+  anraaa-6:
+    identifier: "ANRAAA-6"
+    priority: "medium"
+    status: "in_review"
+  anraaa-7:
+    identifier: "ANRAAA-7"
+    priority: "medium"
+    status: "done"
+  anraaa-8:
+    identifier: "ANRAAA-8"
+    priority: "high"
+    status: "backlog"
+  anraaa-9:
+    identifier: "ANRAAA-9"
+    priority: "high"
+    status: "done"
