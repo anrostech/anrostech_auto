@@ -2,6 +2,8 @@ schema: "paperclip/v1"
 agents:
   ceo:
     role: "ceo"
+    icon: "crown"
+    capabilities: "Runs AnrosTech: reviews the task board, unblocks the team, and delegates new work to the right agent. Never executes code, design, QA, or marketing — plans and directs only."
     adapter:
       config:
         graceSec: 20
@@ -16,7 +18,7 @@ agents:
   engineer1:
     role: "engineer"
     icon: "code"
-    capabilities: "Implements technical features, writes code, fixes bugs, and supports engineering delivery. Specializes in frontend/backend development, API integrations, and system implementation. CI/CD deployment. Push new feature, fix"
+    capabilities: "Implements features and fixes across frontend, backend, and infrastructure. Writes code, integrates APIs, ships pull requests, and handles CI/CD deployments."
     adapter:
       config:
         graceSec: 20
@@ -29,7 +31,7 @@ agents:
   marketer:
     role: "general"
     icon: "search"
-    capabilities: "Responsible for marketing tasks of the company"
+    capabilities: "Owns marketing and growth: content, campaigns, positioning, and distribution. Turns AnrosTech's work into reach across the channels where customers actually are."
     adapter:
       config:
         graceSec: 20
@@ -42,7 +44,7 @@ agents:
   qa:
     role: "qa"
     icon: "eye"
-    capabilities: "Executes comprehensive testing, quality verification, bug detection, and validation of technical implementations. Ensures software quality, reliability, and user experience standards. Test new feature, fix"
+    capabilities: "Tests features and fixes before they ship. Writes test plans, runs verification, files bugs, and enforces quality, reliability, and UX standards across every release."
     adapter:
       config:
         graceSec: 20
@@ -54,6 +56,8 @@ agents:
         intervalSec: 600
   reviewer:
     role: "general"
+    icon: "check"
+    capabilities: "Reviews pull requests and code changes before merge: correctness, security, maintainability, and alignment with the task. Approves, requests changes, or escalates to the CEO."
     adapter:
       config:
         dangerouslySkipPermissions: true
@@ -68,7 +72,7 @@ agents:
   uiuxdesigner:
     role: "designer"
     icon: "eye"
-    capabilities: "Owns user experience, design systems, and user research"
+    capabilities: "Owns user experience, design systems, and user research. Produces wireframes, component specs, and usability feedback so engineering ships interfaces that feel right."
     adapter:
       config:
         graceSec: 20
