@@ -1,7 +1,7 @@
 ---
-name: "AnrosTech"
-schema: "agentcompanies/v1"
-slug: "anrostech"
+name: 'AnrosTech'
+schema: 'agentcompanies/v1'
+slug: 'anrostech'
 ---
 
 AnrosTech is Vietnam's premier software development and consulting company, building web and mobile products across frontend, backend, and infrastructure.
@@ -14,11 +14,16 @@ AnrosTech is Vietnam's premier software development and consulting company, buil
 
 ## Agents
 
-| Agent | Role |
-|-------|------|
-| CEO | Strategic leadership and coordination |
-| Engineer1 | Frontend/backend development, CI/CD |
-| LegalCounsel | Legal guidance, contracts, compliance |
-| Marketer | Marketing and growth |
-| QA | Testing and quality assurance |
-| UIUXDesigner | UX design and design systems |
+### Tier 1
+| Agent | Role                                          |
+| ----- | --------------------------------------------- |
+| CEO   | Strategy, planning, and task delegation only  |
+
+### Tier 2
+| Agent        | Role                                  |
+| ------------ | ------------------------------------- |
+| Engineer1    | Frontend/backend development, CI/CD   |
+| UIUXDesigner | UX design and design systems          |
+| Marketer     | Marketing, growth, and content        |
+| QA           | Testing and quality assurance         |
+| Reviewer     | Code review and PR approvals          |

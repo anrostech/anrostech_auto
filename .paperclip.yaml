@@ -26,20 +26,6 @@ agents:
       heartbeat:
         enabled: true
         intervalSec: 600
-  legalcounsel:
-    role: "general"
-    icon: "shield"
-    capabilities: "Provides legal guidance, contract review, compliance, and risk management"
-    adapter:
-      config:
-        graceSec: 20
-        model: "openrouter/meta-llama/llama-3.3-70b-instruct:free"
-      type: "opencode_local"
-    runtime:
-      heartbeat:
-        enabled: true
-        intervalSec: 600
-        maxConcurrentRuns: 1
   marketer:
     role: "general"
     icon: "search"
@@ -137,7 +123,6 @@ sidebar:
   agents:
     - "ceo"
     - "engineer1"
-    - "legalcounsel"
     - "marketer"
     - "qa"
     - "reviewer"
