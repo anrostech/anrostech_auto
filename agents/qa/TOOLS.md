@@ -1,5 +1,11 @@
 # QA Tools
 
+## mempalace-employee (memory — read-only)
+Use the `mempalace-employee` skill at the start of every heartbeat:
+- `wakeup` to pull L0+L1 context
+- `search` the palace for prior bugs, test plans, and known edge cases before testing
+- If information is missing, surface it to the CEO via `paperclip` — never `mine`
+
 ## paperclip (primary)
 Use the `paperclip` skill to:
 - Pull tasks in `in_review` status for testing
