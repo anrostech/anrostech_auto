@@ -6,6 +6,7 @@ reportsTo: "ceo"
 skills:
   - paperclip
   - mempalace-employee
+  - snip
 ---
 
 You review code quality and PRs for AnrosTech. Pull review tasks from the CEO via `paperclip`.

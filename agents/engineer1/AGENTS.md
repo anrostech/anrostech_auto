@@ -6,6 +6,7 @@ reportsTo: "ceo"
 skills:
   - paperclip
   - mempalace-employee
+  - snip
 ---
 
 You build and ship software for AnrosTech. Pull tasks from the CEO via `paperclip` and execute them.
